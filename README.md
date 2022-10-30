@@ -10,7 +10,10 @@ python3 -m venv env
 source ./env/bin/activate
 python -m pip install --upgrade pip
 
-# Install fast api
+# Install fast api with all reqs
+pip install "fastapi[all]"
+
+# OR install min reqs
 pip install fastapi
 pip install uvicorn
 
