@@ -1,4 +1,4 @@
-# journey-within-without
+# affirmations
 Using AI's superpowers to help us in our darkest times
 
 ## Build Pre-Setup
