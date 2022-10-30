@@ -9,7 +9,7 @@ Using AI's superpowers to help us in our darkest times
 pip -V || brew install python
 
 # Setup python virtual env
-python3 -m venv env
+python3.10 -m venv env
 source ./env/bin/activate
 python -m pip install --upgrade pip
 
@@ -26,7 +26,7 @@ Following steps on <https://tutlinks.com/create-and-deploy-fastapi-app-to-heroku
 
 ```bash
 # Setup ptyhon and virtual env
-python3 -m venv env
+python3.10 -m venv env
 source ./env/bin/activate
 python -m pip install --upgrade pip
 
