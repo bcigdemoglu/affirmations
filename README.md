@@ -1,10 +1,12 @@
 # affirmations
+
 Using AI's superpowers to help us in our darkest times
 
-## Build Pre-Setup
+## Build Work Notes
 
-Following steps on https://tutlinks.com/create-and-deploy-fastapi-app-to-heroku/
-```
+Following steps on <https://tutlinks.com/create-and-deploy-fastapi-app-to-heroku/>
+
+```bash
 # Setup ptyhon and virtual env
 python3 -m venv env
 source ./env/bin/activate
@@ -26,6 +28,11 @@ pip freeze > requirements.txt
 
 ## Build Setup
 
-```
+```bash
+# Setup ptyhon and virtual env
+source ./env/bin/activate
+python -m pip install --upgrade pip
+
+# Install reqs
 pip install -r requirements.txt
 ```
