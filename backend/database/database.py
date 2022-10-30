@@ -2,13 +2,13 @@
 
 # from beanie import PydanticObjectId
 
-# from models.admin import Admin
+from models.affirmation import Affirmation
 
-# admin_collection = Admin
+affirmation_collection = Affirmation
 
-# async def add_admin(new_admin: Admin) -> Admin:
-#     admin = await new_admin.create()
-#     return admin
+async def add_admin(new_affirmation: Affirmation) -> Affirmation:
+    affirmation = await new_affirmation.create()
+    return affirmation
 
 # async def retrieve_students() -> List[Student]:
 #     students = await student_collection.all().to_list()

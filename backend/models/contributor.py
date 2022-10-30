@@ -12,4 +12,4 @@ class Contributor(Document):
     coords: Optional[tuple[float, float]]
 
     class Settings:
-        name = "contributors"
+        name: str = "contributors"

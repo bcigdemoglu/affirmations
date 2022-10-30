@@ -15,6 +15,9 @@ python -m pip install --upgrade pip
 
 # Install reqs
 pip install -r requirements.txt
+
+# Run backend
+uvicorn backend.app:app --host 127.0.0.1 --port 5000 --reload
 ```
 
 ## Backend Development History
