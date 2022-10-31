@@ -130,3 +130,4 @@ dmypy.json
 
 # secret file
 SECRETS
+SECRETS.sh

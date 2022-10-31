@@ -27,6 +27,8 @@ Access website from http://127.0.0.1:5000
 Swagger Docs from http://127.0.0.1:5000/docs
 Redoc Docs from http://127.0.0.1:5000/redoc
 
+https://journey-within-outside.herokuapp.com/random-affirmation
+
 ## Testing
 
 ### Test Backend

@@ -2,7 +2,9 @@
 import os
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from motor.motor_asyncio import AsyncIOMotorClient
+from starlette.responses import FileResponse
 
 from .database import database
 from .ilayda.generator import query_openai
@@ -26,8 +28,8 @@ async def app_init():
     pass
 
 @app.get("/")
-async def hello() -> dict[str, str]:
-    return {"message":"Kalbim ILOMMMM"}
+async def hello() -> FileResponse:
+    return FileResponse('frontend/index.html')
 
 @app.post("/get-affirmation")
 async def post_dealt_issue(dealt_issue: DealtIssue) -> Affirmation:
