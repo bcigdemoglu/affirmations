@@ -15,10 +15,23 @@
 </div>
 <!-- create input box -->
 <div class="centered-bottom">
-    <input type="text" class="input" placeholder="What are you currently dealing with?">
+    <input type="text" 
+    class="input" 
+    id="userInput"
+    placeholder="What are you currently dealing with?">
+
 </div>
 
 <!-- create submit button under the input box -->
 <div class="centered-below">
-    <button class="button">Submit</button>
+    <input type = "button" class="button" value = "Submit" onclick = saveInput() />
+    <h2 id="message"></h1>
+
 </div>
+<><script> 
+    function saveInput() {
+        let userInput = document.querySelector("#userInput");
+        let message = document.querySelector("#message");
+        message.innerHTML = "Thank you for your submission!";
+    }
+</script>
