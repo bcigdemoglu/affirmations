@@ -29,17 +29,18 @@ body {
       font-weight:500;
   }
   h2{
-        position:relative;
-        color:white;
-        font-size:10px;
-        font-weight:100;
-        margin-top:10px;
-        width:30px;
-        color:#ccc;
-        display:inline-block;
-        font-family:kanit;
-        font-style:italic;
-        font-weight:100;
+        position:absolute;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        width: 300px;
+        color: #ccc;
+        display: inline-block;
+        font-family: kanit;
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 60px;
+        margin-left: 10px;
   }
 
   .title {
