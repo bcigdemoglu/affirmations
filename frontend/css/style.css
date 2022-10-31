@@ -1,0 +1,100 @@
+body {
+    background-color:#111;
+    overflow: visible;
+    display: fixed;
+    align-items: center;
+    justify-content: bottom; 
+    font-family: Kanit, sans-serif;
+  }
+  
+  body,
+  html {
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+  }
+ 
+  h1 {
+      position:relative;
+      color:white;
+      font-size:70px;
+      font-weight:400;
+     margin-top:10px;
+      width:300px;
+      color:#ccc;
+      display:inline-block;
+      font-family:kanit;
+      font-style:italic;
+      font-weight:500;
+  }
+
+  .title {
+    color: white;
+    font-size: 100px;
+  }
+  /* style the text box */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .centered-bottom {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* style the button */
+  .button {
+    background-color: rgb(15, 162, 175); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+/* position the button below */
+  .centered-below {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    
+  .text {
+    border: 2px solid #f1f1f1;
+    font-size: 16px;
+    padding: 16px 16px;
+    width: 300px;
+    background: #f1f1f1;
+  }
+ 
+  /* style input box */
+  input[type=text] {
+    width: 100%;    
+    padding: 12px 200px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
+    
+  /* style button */
+  button {
+    background-color: rgb(15, 162, 175);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
