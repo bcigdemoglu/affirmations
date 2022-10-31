@@ -6,7 +6,7 @@ from models.affirmation import Affirmation
 
 affirmation_collection = Affirmation
 
-async def add_admin(new_affirmation: Affirmation) -> Affirmation:
+async def add_affirmation(new_affirmation: Affirmation) -> Affirmation:
     affirmation = await new_affirmation.create()
     return affirmation
 
