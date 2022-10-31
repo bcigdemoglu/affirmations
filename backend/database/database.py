@@ -2,17 +2,34 @@
 
 # from beanie import PydanticObjectId
 
-from models.affirmation import Affirmation
+import os
+
+from beanie import Document, init_beanie
+from motor.motor_asyncio import AsyncIOMotorClient
+
+from ..models.affirmation import Affirmation
 
 affirmation_collection = Affirmation
 
-async def add_affirmation(new_affirmation: Affirmation) -> Affirmation:
-    affirmation = await new_affirmation.create()
-    return affirmation
+# TODO: Implement this
+# async def init() -> None:
+#     # Create Motor client
+#     client = AsyncIOMotorClient(
+#         os.getenv("MONGODB_URI") or "mongodb://user:pass@host:27017"
+#     )
 
-# async def retrieve_students() -> List[Student]:
-#     students = await student_collection.all().to_list()
-#     return students
+#     # Initialize beanie with Affirmations collection and db
+#     print("initializing beanie")
+#     await init_beanie(database=client.affirmations, document_models=[Affirmation])
+#     print("initialized beanie")
+
+# async def add_affirmation(new_affirmation: Affirmation) -> Affirmation:
+#     affirmation = await new_affirmation.create()
+#     return affirmation
+
+# async def get_random_affirmation() -> Affirmation:
+#     affirmation = await affirmation_collection.find_all().limit(1).to_list()
+#     return affirmation[0]
 
 
 # async def add_student(new_student: Student) -> Student:
