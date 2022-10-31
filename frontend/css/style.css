@@ -78,9 +78,9 @@ body {
  
   /* style input box */
   input[type=text] {
-    width: 100%;    
+    width: 120%;    
     padding: 12px 200px;
-    margin: 8px 0;
+    margin: 8px 0;  
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 40px;
