@@ -18,8 +18,17 @@ pip install -r requirements.txt
 
 # Add you OPENAI_API_KEY and MONGODB_URL to a SECRETS.sh file at root
 source SECRETS.sh
+```
 
-# Run backend
+### Update pip requirements
+
+```bash
+pip freeze > requirements.txt
+```
+
+## Run backend
+
+```bash
 python -m uvicorn backend.app:app --host 127.0.0.1 --port 5000 --reload
 ```
 

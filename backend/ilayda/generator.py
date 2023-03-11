@@ -5,8 +5,9 @@ import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+
 async def query_openai(user_issue: str) -> str:
-    prompt: str = f"Write three sentences of affirmation for me as I am dealing with \"{user_issue}\"."
+    prompt: str = f"Write a sentence of affirmation for me as I am dealing with \"{user_issue}\"."
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
