@@ -31,7 +31,7 @@ openai==0.24.0
 openpyxl==3.0.10
 orjson==3.8.1
 packaging==21.3
-pandas==1.5.1
+pandas==1.5.3
 pandas-stubs==1.5.1.221024
 platformdirs==2.5.2
 pluggy==1.0.0
