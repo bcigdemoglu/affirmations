@@ -1,0 +1,20 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: frontend
+    src: ./frontend
+    engine: python3.9
+    primary: true
+    public: true
+    run: python -m http.server $PORT
+    dev: python -m http.server $PORT
+  - name: backend
+    src: ./
+    engine: python3.9
+    run: uvicorn backend.app:app
+    dev: env/bin/uvicorn backend.app:app --reload
+    public: true
+    presets:
+      env:
+        - name: OPENAI_API_KEY
+

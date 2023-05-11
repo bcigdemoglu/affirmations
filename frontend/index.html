@@ -1,54 +1,95 @@
+<meta property="og:title" content="Affirmations" />
+<meta
+  property="og:description"
+  content="Using AI's superpowers to help us in our darkest times"
+/>
+<meta property="og:url" content="https://affirmations-1-m6137384.deta.app" />
+<meta
+  property="og:image"
+  content="https://affirmations-1-m6137384.deta.app/favicon.ico"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <!-- Import background css and javascript -->
 <link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 <!-- create html body -->
 <body>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?v=clamsauce"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.5/pixi.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/PixiPlugin3.min.js"></script>
-    <script src="js/background.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?v=clamsauce"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.5/pixi.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/PixiPlugin3.min.js"></script>
+  <script src="js/background.js"></script>
 </body>
 
 <!-- create text box at the center-->
 <div class="centered">
-    <h1 class="h1">Affirmations</h1>
+  <h1 id="title" class="h1">Affirmations</h1>
 </div>
 <!-- create input box -->
 <div class="centered-bottom">
-    <input type="text"
+  <input
+    type="text"
     class="input"
     id="userInput"
-    placeholder="What are you currently dealing with?">
-
+    placeholder="What are you currently dealing with?"
+  />
 </div>
 
-<!-- create submit button under the input box -->
+<!-- create response under affirmation -->
 <div class="centered-below">
-    <input type = "button" class="button" value = "Submit" onclick = saveInput() />
-    <h2 id="message"></h2>
-
+  <input
+    id="sendtouniverse"
+    type="button"
+    class="button"
+    value="Send to universe"
+    onclick="saveInput()"
+  />
 </div>
+
+<!-- create response under affirmation -->
+<div class="centered-response">
+  <h2 id="message">Waiting for your affirmation...</h2>
+</div>
+
 <script>
-    function saveInput() {
-        let userInput = document.querySelector("#userInput");
-        let message = document.querySelector("#message");
-        message.innerHTML = "Please wait while we send your affirmation to the universe...";
-        // Create API call to https://journey-within-outside.herokuapp.com/get-affirmation with JSON body { "text": userInput.value }
-        // Fetch API call
-        fetch('https://journey-within-outside.herokuapp.com/get-affirmation', {
-            method: 'POST',
-            body: JSON.stringify({ "text": userInput.value }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            return data.affirmation;
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+  function saveInput() {
+    var button = document.getElementById("sendtouniverse");
+    button.disabled = true;
+    button.value = "Sending your affirmation to the universe...";
+
+    let userInput = document.querySelector("#userInput");
+    let message = document.querySelector("#message");
+    let apiUrl = "backend/get-affirmation";
+    console.log(location.protocol);
+    if (location.protocol === "file:") {
+      apiUrl = "backend/get-affirmation";
     }
+
+    // Fetch API call
+
+    fetch(apiUrl, {
+      method: "POST",
+      body: JSON.stringify({ text: userInput.value }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        button.value = "Universe has responded! Here is your affirmation...";
+        setTimeout(function () {
+          message.innerHTML = data.affirmation;
+          button.disabled = false;
+          button.value = "Send to universe";
+        }, 3000);
+        return data.affirmation;
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        message.innerHTML =
+          "Cannot talk to the universe right now. Try again later.";
+      });
+  }
 </script>

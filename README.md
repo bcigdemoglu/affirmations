@@ -2,14 +2,16 @@
 
 Using AI's superpowers to help us in our darkest times
 
+## https://affirmations-1-m6137384.deta.app
+
 ## Backend Build Setup
 
 ```bash
 # Install pip if "pip" not installed
-pip -V || brew install python
+pip -V || brew install python@3.9
 
 # Setup python virtual env
-python3.10 -m venv env
+python3.9 -m venv env
 source ./env/bin/activate
 python -m pip install --upgrade pip
 
@@ -52,20 +54,33 @@ Following steps on <https://tutlinks.com/create-and-deploy-fastapi-app-to-heroku
 
 ```bash
 # Setup ptyhon and virtual env
-python3.10 -m venv env
+python3.9 -m venv env
 source ./env/bin/activate
 python -m pip install --upgrade pip
 
 # Install fast api with all reqs
 pip install "fastapi[all]"
 
-# OR install min reqs
-pip install fastapi
-pip install uvicorn
-
 # To serve on heroku
 pip install gunicorn
 
-# Free all reqs
+# Freeze all reqs
 pip freeze > requirements.txt
+```
+
+Test frontend
+
+```
+cd frontend && python -m http.server; cd ..
+```
+
+## Pushing code to public
+
+```
+# Install space
+curl -fsSL https://get.deta.dev/space-cli.sh | sh
+space login
+
+# Push to public
+space push
 ```

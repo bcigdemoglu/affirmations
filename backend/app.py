@@ -2,17 +2,27 @@
 import os
 
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.routing import Mount
 from motor.motor_asyncio import AsyncIOMotorClient
 from starlette.responses import FileResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from .database import database
 from .ilayda.generator import query_openai
 from .models.affirmation import Affirmation, DealtIssue
 
 app: FastAPI = FastAPI()
-app.mount("/frontend", StaticFiles(directory="frontend"), name="static")
+
+origins = [
+    "http://localhost:8000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 async def gen_affirmation(dealt_issue: DealtIssue) -> Affirmation:
@@ -31,18 +41,11 @@ async def app_init():
     # await database.init()
     pass
 
-# Define route returning JSON response
-
 
 @app.get("/")
 async def home() -> JSONResponse:
     # Return JSONResponse
     return JSONResponse(content={"message": "Kalbim ILOMMMM"})
-
-
-@app.get("/get-index")
-async def get_index() -> FileResponse:
-    return FileResponse('frontend/index.html')
 
 
 @app.post("/get-affirmation")
