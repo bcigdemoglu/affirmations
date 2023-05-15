@@ -53,14 +53,14 @@ h2 {
 /* style the text box */
 .centered {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .centered-bottom {
   position: absolute;
-  bottom: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -82,7 +82,7 @@ h2 {
 /* position the button below */
 .centered-below {
   position: absolute;
-  bottom: 25%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -90,7 +90,7 @@ h2 {
 /* position response at the bottom */
 .centered-response {
   position: absolute;
-  bottom: 10%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
