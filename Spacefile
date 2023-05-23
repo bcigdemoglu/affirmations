@@ -12,7 +12,7 @@ micros:
     src: ./
     engine: python3.9
     run: uvicorn backend.app:app
-    dev: source ./env/bin/activate && source SECRETS.sh && env/bin/uvicorn backend.app:app --reload
+    dev: env/bin/uvicorn backend.app:app --reload
     public: true
     presets:
       env:

@@ -84,3 +84,10 @@ space login
 # Push to public
 space push
 ```
+
+## Spinning up local testing
+
+```
+source ./env/bin/activate && source SECRETS.sh
+space dev
+```
