@@ -2,6 +2,22 @@
 
 Using AI's superpowers to help us in our darkest times
 
+## How to Use
+
+Follow these simple steps to get your affirmation:
+
+1. **Visit the Website:**
+   Navigate to the website to start the process.
+   ![Website Homepage](./screenshots/welcome.png)
+
+2. **Enter Your Problem:**
+   In the provided input field, type in what you're currently dealing with and then click "Get Affirmation."
+   ![Enter Problem](./screenshots/problem.png)
+
+3. **Receive Your Affirmation:**
+   The universe will provide you with a personalized affirmation. Embrace it and feel the positivity flow through you.
+   ![View Affirmation](./screenshots/affirmation.png)
+
 ## https://affirmations-1-m6137384.deta.app
 
 ## Backend Build Setup
