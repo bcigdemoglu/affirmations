@@ -24,7 +24,7 @@ Follow these simple steps to get your affirmation:
 
 ```mermaid
 graph LR
-    user[User] --> frontEnd[Front End HTML JS Deta]
+    user[User] --> frontEnd[Front End HTML JS - Deta]
     frontEnd --> backEnd[Backend FastAPI - Heroku]
     backEnd --> openAI[OpenAI API]
     backEnd --> huggingFace[Hugging Face API]
