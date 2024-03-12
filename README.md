@@ -1,6 +1,6 @@
-# affirmations
+# Affirmations
 
-Using AI's superpowers to help us in our darkest times
+Using AI's superpowers to help us in our darkest times. @ilaydabdogan and @bcigdemoglu came up with the idea of using OpenAI's GPT and Mistral model on Hugging Face to generate affirmations for people who are feeling down or need a little boost. The idea is to provide a platform where people can come and get a personalized affirmation to improve their quality of life. The affirmation is generated based on the user's input and the model's understanding of the world.
 
 ## How to Use
 
@@ -19,6 +19,16 @@ Follow these simple steps to get your affirmation:
    ![View Affirmation](./screenshots/affirmation.png)
 
 ## https://affirmations-1-m6137384.deta.app
+
+## High level architecture
+
+```mermaid
+graph LR
+    user[User] --> frontEnd[Front End HTML JS Deta]
+    frontEnd --> backEnd[Backend FastAPI - Heroku]
+    backEnd --> openAI[OpenAI API]
+    backEnd --> huggingFace[Hugging Face API]
+```
 
 ## Backend Build Setup
 
@@ -78,7 +88,7 @@ python -m pip install --upgrade pip
 pip install "fastapi[all]"
 
 # To serve on heroku
-pip install gunicorn
+pip install gunicorn requests
 
 # Freeze all reqs
 pip freeze > requirements.txt

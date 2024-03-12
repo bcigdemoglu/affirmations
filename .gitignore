@@ -135,3 +135,7 @@ SECRETS.sh
 # mac
 .DS_Store
 .space
+.vercel
+
+# env
+.env*
