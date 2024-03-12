@@ -7,7 +7,7 @@ from starlette.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import database
-from .ilayda.generator import query_openai
+from .ilayda.generator import query_hugging_face
 from .models.affirmation import Affirmation, DealtIssue
 
 app: FastAPI = FastAPI()
@@ -26,7 +26,7 @@ app.add_middleware(
 
 
 async def gen_affirmation(dealt_issue: DealtIssue) -> Affirmation:
-    affirm_text: str = await query_openai(dealt_issue.text)
+    affirm_text: str = await query_hugging_face(dealt_issue.text)
     affirmation: Affirmation = Affirmation(
         dealt_issue=dealt_issue, affirmation=affirm_text
     )
