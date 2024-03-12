@@ -1,6 +1,6 @@
 # Affirmations
 
-Using AI's superpowers to help us in our darkest times. @ilaydabdogan and @bcigdemoglu came up with the idea of using OpenAI's GPT and Mistral model on Hugging Face to generate affirmations for people who are feeling down or need a little boost. The idea is to provide a platform where people can come and get a personalized affirmation to improve their quality of life. The affirmation is generated based on the user's input and the model's understanding of the world.
+Using AI's superpowers to help us in our darkest times. [Ilayda Buyukdogan](https://github.com/ilaydabdogan) and [Boogie Cigdemoglu](https://github.com/bcigdemoglu) came up with the idea of using OpenAI's GPT and Mistral model on Hugging Face to generate affirmations for people who are feeling down or need a little boost. The idea is to provide a platform where people can come and get a personalized affirmation to improve their quality of life. The affirmation is generated based on the user's input and the model's understanding of the world.
 
 ## How to Use
 
